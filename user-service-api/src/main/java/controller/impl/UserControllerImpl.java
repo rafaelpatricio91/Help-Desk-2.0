@@ -18,13 +18,9 @@ public class UserControllerImpl implements UserController {
 
     private final UserService userService;
 
-   @GetMapping
-   public ResponseEntity<User> findById(@PathVariable("id") final String id) {
-        return ResponseEntity.ok().body(userService.findById(id));
-    }
 
-    @Override
-    public List<User> findAll() {
-        return userService.findAll();
+   public ResponseEntity<User> findById(final String id) {
+        System.out.println("XXXXX");
+        return ResponseEntity.ok().body(userService.findById(id));
     }
 }

@@ -14,6 +14,4 @@ public interface UserController {
     @GetMapping("/{id}")
     ResponseEntity<User> findById(@PathVariable(name = "id") final String id);
 
-    @GetMapping
-    List<User> findAll();
 }
